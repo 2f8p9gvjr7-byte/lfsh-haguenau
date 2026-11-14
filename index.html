@@ -67,9 +67,9 @@ nav button.on{color:var(--amb)}
 <rect x="40" y="146" width="300" height="20" fill="#5F5E5A"/>
 <line x1="140" y1="156" x2="280" y2="156" stroke="#fff" stroke-dasharray="8 6"/>
 <line x1="107" y1="146" x2="107" y2="166" stroke="#fff" stroke-width="2"/><line x1="307" y1="146" x2="307" y2="166" stroke="#fff" stroke-width="2"/>
-<text x="122" y="160" text-anchor="middle" style="fill:#fff">03</text><text x="292" y="160" text-anchor="middle" style="fill:#fff">21</text>
 <text x="107" y="180" text-anchor="middle">DTHR 03</text><text x="307" y="180" text-anchor="middle">DTHR 21</text>
 <g id="dyn"></g>
+<text x="122" y="160" text-anchor="middle" style="fill:#fff;paint-order:stroke;stroke:#5F5E5A;stroke-width:4px">03</text><text x="292" y="160" text-anchor="middle" style="fill:#fff;paint-order:stroke;stroke:#5F5E5A;stroke-width:4px">21</text>
 </svg>
 <div class="leg"><span><i style="background:#f5a623"></i>point d'attente</span><span><i style="background:#3498db"></i>atterrissage</span><span><i style="background:#4ade80"></i>décollage</span><span>pointillés = en l'air</span></div>
 <ol id="cap"></ol>
@@ -130,12 +130,12 @@ nav button.on{color:var(--amb)}
 <div class="upd" id="upd" hidden><span>Nouvelle version disponible</span><button id="updBtn">Mettre à jour</button></div>
 
 <script>
-const VERSION='1.0.0';document.getElementById('v').textContent=VERSION;
+const VERSION='1.0.1';document.getElementById('v').textContent=VERSION;
 const B='#3498db',C='#4ade80';
 const S={
-L03:{svg:`<path d="M4 132 L120 156" fill="none" stroke="${B}" stroke-width="2" stroke-dasharray="5 4"/><circle cx="124" cy="156" r="4" fill="${B}"/><path d="M124 156 L338 156 L338 90 L190 90 L190 63" fill="none" stroke="${B}" stroke-width="2.5" marker-end="url(#ar)"/><line x1="107" y1="200" x2="340" y2="200" stroke="${B}" stroke-width="3"/><text x="223" y="218" text-anchor="middle">LDA 775 m</text>`,
+L03:{svg:`<path d="M4 132 L136 156" fill="none" stroke="${B}" stroke-width="2" stroke-dasharray="5 4"/><circle cx="140" cy="156" r="4" fill="${B}"/><path d="M140 156 L338 156 L338 90 L190 90 L190 63" fill="none" stroke="${B}" stroke-width="2.5" marker-end="url(#ar)"/><line x1="107" y1="200" x2="340" y2="200" stroke="${B}" stroke-width="3"/><text x="223" y="218" text-anchor="middle">LDA 775 m</text>`,
 cap:["Finale au 026°, passez le seuil décalé 03 à 15 m (50 ft).","Posez-vous après le seuil décalé, jamais avant.","Roulez jusqu'au bout nord-est de la piste.","Dégagez vers A, annoncez « piste dégagée », puis rejoignez le parking par le taxiway."]},
-L21:{svg:`<path d="M376 132 L292 156" fill="none" stroke="${B}" stroke-width="2" stroke-dasharray="5 4"/><circle cx="288" cy="156" r="4" fill="${B}"/><path d="M288 156 L42 156 L42 90 L190 90 L190 63" fill="none" stroke="${B}" stroke-width="2.5" marker-end="url(#ar)"/><line x1="40" y1="200" x2="307" y2="200" stroke="${B}" stroke-width="3"/><text x="173" y="218" text-anchor="middle">LDA 890 m</text>`,
+L21:{svg:`<path d="M376 132 L276 156" fill="none" stroke="${B}" stroke-width="2" stroke-dasharray="5 4"/><circle cx="272" cy="156" r="4" fill="${B}"/><path d="M272 156 L42 156 L42 90 L190 90 L190 63" fill="none" stroke="${B}" stroke-width="2.5" marker-end="url(#ar)"/><line x1="40" y1="200" x2="307" y2="200" stroke="${B}" stroke-width="3"/><text x="173" y="218" text-anchor="middle">LDA 890 m</text>`,
 cap:["Finale au 206°, passez le seuil décalé 21 à 15 m (50 ft).","Posez-vous après le seuil décalé.","Roulez jusqu'au bout sud-ouest de la piste.","Dégagez vers B, annoncez « piste dégagée », puis rejoignez le parking par le taxiway."]},
 D03:{svg:`<path d="M190 60 L190 90 L42 90 L42 156 L235 156" fill="none" stroke="${C}" stroke-width="2.5"/><path d="M235 156 L372 118" fill="none" stroke="${C}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/><circle cx="280" cy="143.5" r="4" fill="${C}"/><text x="275" y="137" text-anchor="end" style="fill:${C}">15 m</text><line x1="40" y1="200" x2="307" y2="200" stroke="${C}" stroke-width="3"/><text x="173" y="218" text-anchor="middle">TODA 910 m → fin au DTHR 21</text>`,
 cap:["Du parking, prenez le taxiway vers B jusqu'au bout sud-ouest.","Arrêtez-vous au point d'attente, avant la bande en herbe : essais moteur et annonce radio.","Alignez-vous tout au bout de la piste pour avoir toute la longueur.","Vous devez passer les 15 m avant le seuil décalé 21 (TODA 910 m)."]},
