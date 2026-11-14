@@ -108,6 +108,13 @@ nav button.on{color:var(--amb)}
 
 <section id="t-rules" hidden>
 <h2>Consignes LFSH</h2>
+<div class="card" style="border-color:#f87171"><p style="margin:0 0 6px;color:#f87171;font-weight:600">Villages à éviter : passer derrière</p><ul>
+<li>Ne pas serrer la piste : verticale, puis traversier, vent arrière et étape de base <b>à l'extérieur des villages</b>.</li>
+<li><b>Kaltenhouse</b>, à l'est : vent arrière côté est, <b>derrière le village</b> (à l'est de Kaltenhouse).</li>
+<li><b>Marienthal</b>, au sud : en piste 03, étape de base <b>derrière le village</b> (au sud de Marienthal), puis finale 026°.</li>
+<li>Piste 21 : finale par le nord, axe 206°, comme dessiné sur la VAC.</li>
+<li>Au décollage 21 : pente max, pas de virage au-dessus de Marienthal.</li>
+</ul><p class="note" style="margin:8px 0 0">Cercles bleus sur la VAC (rouges sur SkyDemon) : agglomérations à contourner pour le bruit.</p></div>
 <div class="card"><ul>
 <li><b style="color:var(--amb)">QFU 026° préférentiel</b> (nuisances sonores).</li>
 <li>Décollage QFU 206° : <b>pente max</b> après le passage du seuil.</li>
@@ -133,7 +140,7 @@ nav button.on{color:var(--amb)}
 <div class="upd" id="upd" hidden><span>Nouvelle version disponible</span><button id="updBtn">Mettre à jour</button></div>
 
 <script>
-const VERSION='1.0.5';document.getElementById('v').textContent=VERSION;
+const VERSION='1.0.7';document.getElementById('v').textContent=VERSION;
 const B='#3498db',C='#4ade80';
 const S={
 L03:{svg:`<path d="M4 132 L136 156" fill="none" stroke="${B}" stroke-width="2" stroke-dasharray="5 4"/><circle cx="140" cy="156" r="4" fill="${B}"/><path d="M140 156 L338 156 L338 90 L190 90 L190 63" fill="none" stroke="${B}" stroke-width="2.5" marker-end="url(#ar)"/><line x1="107" y1="200" x2="340" y2="200" stroke="${B}" stroke-width="3"/><text x="223" y="218" text-anchor="middle">LDA 775 m</text>`,

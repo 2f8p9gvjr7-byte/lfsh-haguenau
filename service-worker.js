@@ -1,4 +1,4 @@
-const CACHE = 'lfsh-v1.0.5';
+const CACHE = 'lfsh-v1.0.7';
 const FILES = ['./', 'index.html', 'manifest.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
