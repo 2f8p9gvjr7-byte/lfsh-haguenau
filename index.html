@@ -44,7 +44,7 @@ nav button.on{color:var(--amb)}
 <body>
 <header>
 <h1><span>LFSH</span> Haguenau · piste revêtue</h1>
-<p class="sub">03/21 · 1000 × 18 m · QFU 026°/206° · ≈ 490 ft · radio obligatoire · jour VFR (pas de balisage)</p>
+<p class="sub">03/21 · 1000 × 18 m · QFU 026°/206° · ≈ 490 ft · radio 120.630 · jour VFR (pas de balisage)</p>
 </header>
 
 <main>
@@ -62,7 +62,7 @@ nav button.on{color:var(--amb)}
 <path d="M40 150 L40 90 L340 90 L340 150" fill="none" stroke="#3a4c75" stroke-width="6"/>
 <line x1="190" y1="60" x2="190" y2="90" stroke="#3a4c75" stroke-width="6"/>
 <text x="70" y="80" text-anchor="middle">B</text><text x="310" y="80" text-anchor="middle">A</text>
-<g stroke="#f5a623" stroke-width="2"><line x1="32" y1="99" x2="48" y2="99"/><line x1="32" y1="103" x2="48" y2="103"/><line x1="332" y1="99" x2="348" y2="99"/><line x1="332" y1="103" x2="348" y2="103"/></g>
+<g stroke="#f5a623" stroke-width="2"><line x1="32" y1="137" x2="48" y2="137"/><line x1="32" y1="141" x2="48" y2="141"/><line x1="332" y1="137" x2="348" y2="137"/><line x1="332" y1="141" x2="348" y2="141"/></g>
 <rect x="60" y="110" width="260" height="22" rx="2" fill="#3B6D11"/><text x="190" y="125" text-anchor="middle" style="fill:#C0DD97">Herbe 03L/21R</text>
 <rect x="40" y="146" width="300" height="20" fill="#5F5E5A"/>
 <line x1="140" y1="156" x2="280" y2="156" stroke="#fff" stroke-dasharray="8 6"/>
@@ -74,7 +74,7 @@ nav button.on{color:var(--amb)}
 <div class="leg"><span><i style="background:#f5a623"></i>point d'attente</span><span><i style="background:#3498db"></i>atterrissage</span><span><i style="background:#4ade80"></i>décollage</span><span>pointillés = en l'air</span></div>
 <ol id="cap"></ol>
 </div>
-<p class="note">Schéma non à l'échelle. Le point d'attente n'est pas publié sur la VAC : à confirmer auprès de l'aéroclub.</p>
+<p class="note">Schéma non à l'échelle. Aucun point d'attente n'est matérialisé (ni VAC, ni SkyDemon) : arrêt en bout de taxiway, avant la piste en dur. À confirmer auprès de l'aéroclub.</p>
 </section>
 
 <section id="t-dist" hidden>
@@ -112,7 +112,8 @@ nav button.on{color:var(--amb)}
 <li>Entrée et sortie de la piste revêtue <b>par les extrémités uniquement</b>. Roulage interdit hors piste et taxiway.</li>
 <li>Après l'atterrissage, la piste reste occupée jusqu'au bout : annoncez « piste dégagée ».</li>
 <li>Utilisation simultanée des deux pistes interdite.</li>
-<li>Tour de piste : <span class="mono">1500 ft QNH</span> (1000 ft sol). Tours de piste basse hauteur interdits samedi, dimanche et jours fériés.</li>
+<li>Fréquence <span class="mono">Haguenau 120.630</span>.</li>
+<li>Tour de piste piste revêtue : <b>main droite en 03, main gauche en 21</b>, soit côté est, à l'opposé des hangars. Altitude <span class="mono">1500 ft QNH</span> (1000 ft sol). Tours de piste basse hauteur interdits samedi, dimanche et jours fériés.</li>
 <li>Aéromodélisme zone 8058 : jusqu'à 800 ft sol (1300 ft QNH), du lever au coucher du soleil.</li>
 <li>TMA Strasbourg 1.2 au sud : plancher <span class="mono">2500 ft</span>.</li>
 <li>Résistance de la piste : 5,7 t.</li>
@@ -130,7 +131,7 @@ nav button.on{color:var(--amb)}
 <div class="upd" id="upd" hidden><span>Nouvelle version disponible</span><button id="updBtn">Mettre à jour</button></div>
 
 <script>
-const VERSION='1.0.1';document.getElementById('v').textContent=VERSION;
+const VERSION='1.0.2';document.getElementById('v').textContent=VERSION;
 const B='#3498db',C='#4ade80';
 const S={
 L03:{svg:`<path d="M4 132 L136 156" fill="none" stroke="${B}" stroke-width="2" stroke-dasharray="5 4"/><circle cx="140" cy="156" r="4" fill="${B}"/><path d="M140 156 L338 156 L338 90 L190 90 L190 63" fill="none" stroke="${B}" stroke-width="2.5" marker-end="url(#ar)"/><line x1="107" y1="200" x2="340" y2="200" stroke="${B}" stroke-width="3"/><text x="223" y="218" text-anchor="middle">LDA 775 m</text>`,
@@ -138,9 +139,9 @@ cap:["Finale au 026°, passez le seuil décalé 03 à 15 m (50 ft).","Posez-vous
 L21:{svg:`<path d="M376 132 L276 156" fill="none" stroke="${B}" stroke-width="2" stroke-dasharray="5 4"/><circle cx="272" cy="156" r="4" fill="${B}"/><path d="M272 156 L42 156 L42 90 L190 90 L190 63" fill="none" stroke="${B}" stroke-width="2.5" marker-end="url(#ar)"/><line x1="40" y1="200" x2="307" y2="200" stroke="${B}" stroke-width="3"/><text x="173" y="218" text-anchor="middle">LDA 890 m</text>`,
 cap:["Finale au 206°, passez le seuil décalé 21 à 15 m (50 ft).","Posez-vous après le seuil décalé.","Roulez jusqu'au bout sud-ouest de la piste.","Dégagez vers B, annoncez « piste dégagée », puis rejoignez le parking par le taxiway."]},
 D03:{svg:`<path d="M190 60 L190 90 L42 90 L42 156 L235 156" fill="none" stroke="${C}" stroke-width="2.5"/><path d="M235 156 L372 118" fill="none" stroke="${C}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/><circle cx="280" cy="143.5" r="4" fill="${C}"/><text x="275" y="137" text-anchor="end" style="fill:${C}">15 m</text><line x1="40" y1="200" x2="307" y2="200" stroke="${C}" stroke-width="3"/><text x="173" y="218" text-anchor="middle">TODA 910 m → fin au DTHR 21</text>`,
-cap:["Du parking, prenez le taxiway vers B jusqu'au bout sud-ouest.","Arrêtez-vous au point d'attente, avant la bande en herbe : essais moteur et annonce radio.","Alignez-vous tout au bout de la piste pour avoir toute la longueur.","Vous devez passer les 15 m avant le seuil décalé 21 (TODA 910 m)."]},
-D21:{svg:`<path d="M190 60 L190 90 L338 90 L338 156 L150 156" fill="none" stroke="${C}" stroke-width="2.5"/><path d="M150 156 L8 118" fill="none" stroke="${C}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/><circle cx="125" cy="149.3" r="4" fill="${C}"/><text x="132" y="140" style="fill:${C}">15 m</text><line x1="107" y1="200" x2="340" y2="200" stroke="${C}" stroke-width="3"/><text x="223" y="218" text-anchor="middle">TODA 805 m → fin au DTHR 03</text>`,
-cap:["Du parking, prenez le taxiway vers A jusqu'au bout nord-est.","Arrêtez-vous au point d'attente, avant la bande en herbe : essais moteur et annonce radio.","Alignez-vous tout au bout de la piste.","Vous devez passer les 15 m avant le seuil décalé 03 (TODA 805 m), puis prendre la pente max (anti-bruit)."]}
+cap:["Du parking, prenez le taxiway vers B jusqu'au bout sud-ouest.","Arrêtez-vous en bout de taxiway, juste avant la piste en dur : essais moteur, coup d'œil en finale, annonce radio.","Alignez-vous tout au bout de la piste pour avoir toute la longueur.","Vous devez passer les 15 m avant le seuil décalé 21 (TODA 910 m)."]},
+D21:{svg:`<path d="M190 60 L190 90 L338 90 L338 156 L185 156" fill="none" stroke="${C}" stroke-width="2.5"/><path d="M185 156 L8 118" fill="none" stroke="${C}" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/><circle cx="160" cy="150.6" r="4" fill="${C}"/><text x="166" y="142" style="fill:${C}">15 m</text><line x1="107" y1="200" x2="340" y2="200" stroke="${C}" stroke-width="3"/><text x="223" y="218" text-anchor="middle">TODA 805 m → fin au DTHR 03</text>`,
+cap:["Du parking, prenez le taxiway vers A jusqu'au bout nord-est.","Arrêtez-vous en bout de taxiway, juste avant la piste en dur : essais moteur, coup d'œil en finale, annonce radio.","Alignez-vous tout au bout de la piste.","Vous devez passer les 15 m avant le seuil décalé 03 (TODA 805 m), puis prendre la pente max (anti-bruit)."]}
 };
 const sb=document.querySelectorAll('.btns button');
 function show(k){document.getElementById('dyn').innerHTML=S[k].svg;document.getElementById('cap').innerHTML=S[k].cap.map(t=>'<li>'+t+'</li>').join('');sb.forEach(b=>b.classList.toggle('on',b.dataset.s===k));try{localStorage.setItem('lfsh-s',k)}catch(e){}}
